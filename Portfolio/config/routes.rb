@@ -1,5 +1,7 @@
 require "api_constraints"
 Portfolio::Application.routes.draw do
+  resources :articles
+
   resources :users
 
 namespace :api, defaults: { format: :json }, constraints: { subdomain: 'api' }, path: '/' do
